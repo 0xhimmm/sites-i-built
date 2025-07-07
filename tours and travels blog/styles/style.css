@@ -3,3 +3,135 @@
     margin: 0;
     box-sizing: border-box;
 }
+
+body {
+    font-family: 'Poppins', sans-serif;
+}
+
+/* || VARIABLES */
+:root {
+    --textShadow: 2px 2px 5px rgb(0, 0, 0);
+    --bgHeader: #fff;
+    --cursorPointer: pointer;
+    --mainTextColor: #fcfdff;
+}
+
+/* || UTILITY CLASSES */
+
+.hover-effect {
+    transition: all 0.3s cubic-bezier(0.4, 0, 0.2, 1);
+}
+
+.hover-effect:hover {
+    transform: scale(1.1);
+}
+
+.hover-effect:active {
+    transform: scale(0.9);
+}
+
+/* || STYLES FOR THE SITE */
+
+header {
+    background-color: var(--bgHeader);
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    height: 7vh;
+}
+
+.left-top {
+    display: flex;
+    align-items: center;
+    margin-left: 2%;
+}
+
+.left-top h1 {
+    font-size: 1.1rem;
+    background: linear-gradient(to right, #1e3c72, #2a5298);
+    background-clip: text;
+    -webkit-text-fill-color: transparent;
+}
+
+ul {
+    list-style-type: none;
+    display: flex;
+    justify-content: space-evenly;
+    align-items: center;
+}
+
+ul li {
+    display: inline-block;
+}
+
+ul li a {
+    display: inline-block;
+    text-decoration: none;
+    padding: 5px 10px;
+    font-size: 0.9rem;
+}
+
+.social-icons {
+    display: flex;
+    gap: 10px;
+    margin-right: 2%;
+}
+
+
+main {
+    display: grid;
+    place-items: center;
+    height: 93vh;
+    width: 100%;
+    position: relative;
+}
+
+main::before {
+    content: "";
+    position: absolute;
+    top: 0;
+    left: 0;
+    height: 100%;
+    width: 100%;
+    background-image: url('../images/rsz_2red-sea-resort-night.jpg');
+    background-repeat: no-repeat;
+    background-size: cover;
+    filter: blur(0);
+    z-index: -1;
+}
+
+main .center-container {
+    position: relative;
+    z-index: 10;
+    padding: 3%;
+}
+
+main .center-container h2 {
+    text-align: center;
+    color: var(--mainTextColor);
+    font-size: 1.1rem;
+    text-shadow: var(--textShadow);
+}
+
+main .center-container p {
+    text-align: center;
+    color: var(--mainTextColor);
+    font-size: 2.5rem;
+    font-weight: 700;
+    text-shadow: var(--textShadow);
+    margin-top: 2%;
+}
+
+.button {
+    background: linear-gradient(to left, #002984, #0053d5);
+    display: block;
+    padding: 15px 20px;
+    width: 30%;
+    margin: 0 auto;
+    border-radius: 20px;
+    border: none;
+    margin-top: 8%;
+    cursor: var(--cursorPointer);
+    box-shadow: var(--textShadow);
+    color: var(--mainTextColor);
+}
