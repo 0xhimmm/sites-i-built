@@ -11,6 +11,11 @@
 :root {
     --input-padding: 0 10px;
     --primary-BGCOLOR: #fff;
+    --color1: #f4f1de;
+    --color2: #e07a5f;
+    --color3: #3d405b;
+    --color4: #81b29a;
+    --color5: #f2cc8f;
     --secondary-ff: "Roboto Mono", monospace;
     --hover-scaleUp: scale(1.1);
     --active-scaleDown: scale(0.9);
@@ -32,7 +37,7 @@ body {
     display: flex;
     flex-flow: column nowrap;
     position: absolute;
-    width: 80%;
+    width: 100%;
     text-align: center;
 }
 
@@ -66,7 +71,7 @@ header {
     display: flex;
     justify-content: space-around;
     align-items: center;
-    background-color: var(--primary-BGCOLOR);
+    background-color: var(--color1);
 }
 
 .left {
@@ -88,13 +93,13 @@ header {
 }
 
 #first {
-    color: #393585;
+    color: var(--color3);
     font-size: 0.9rem;
     font-weight: 900;
 }
 
 #second {
-    color: #d5a54e;
+    color: var(--color2);
     font-size: 0.7rem;
     font-weight: 900;
 }
@@ -183,22 +188,22 @@ main {
     height: 60vh;
     padding: 10vh 0 0 0;
     display: grid;
-    grid-template-columns: 1fr 1fr;
+    grid-template-columns: 1.5fr 1fr;
     grid-template-rows: 3fr 1fr;
-    column-gap: 2%;
     position: relative;
 }
 
-/* main::before {
+main::before {
     content: '';
     top: 0;
     left: 0;
     position: absolute;
     width: 100%;
     height: 100%;
-    background-image: url(../images/download.png);
+    background-size: cover;
+    background-image: url(../images/rsz_man-using-screwdriver-open-phone.jpg);
     z-index: -10;
-} */
+}
 
 main .main-left {
     grid-area: 1 / 1 / 2 / 2;
@@ -213,6 +218,7 @@ main .main-left p:first-child{
     font-size: 2.1rem;
     font-weight: 400;
     font-family: var(--secondary-ff);
+    color: rgb(78, 78, 78);
 }
 
 main .main-left p:nth-child(2){
@@ -220,13 +226,14 @@ main .main-left p:nth-child(2){
     font-size: 3rem;
     font-weight: 700;
     width: 15ch;
+    color: rgb(58, 58, 58);
 }
 
 main .main-left .main-left-link{
     font-size: 0.7rem;
     text-decoration: none;
-    background-color: var(--primary-BGCOLOR);
-    color: #546077;
+    background-color: var(--color3);
+    color: var(--primary-BGCOLOR);
     width: fit-content;
     padding: 8px 16px;
     border-radius: 3px;
@@ -234,7 +241,7 @@ main .main-left .main-left-link{
 }
 
 main .main-left .main-left-link:hover {
-    transform: var(--hover-scaleUp);
+    transform: var(--hover-scaleUp);;
 }
 
 main .main-left .main-left-link:active {
@@ -247,9 +254,9 @@ main .main-right {
     display: flex;
     flex-direction: column;
     align-items: center;
-    padding: 10px;
+    padding: 10px 0;
     border-radius: 5px;
-    background-color: var(--primary-BGCOLOR);
+    background-color: var(--color4);
 }
 
 main #second-header {
@@ -262,7 +269,7 @@ main .main-right form {
     grid-template-columns:1fr 1fr;
     grid-template-rows: 1fr 1fr 1fr 2fr 1fr;
     gap: 10px;
-    padding: 10px 0;
+    padding: 10px 30px;
 }
 
 #name {
@@ -303,7 +310,7 @@ input:focus, textarea:focus {
 #submit {
     grid-area: 5 / 1 / 6 / 3;
     padding: 8px 0;
-    background-color: #032c70;
+    background-color: var(--color3);
     border: none;
     color: var(--primary-BGCOLOR);
     border-radius: 3px;
